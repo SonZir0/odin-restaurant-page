@@ -16,6 +16,9 @@
     --main-color: #ecf4fa;
     --slightly-darker-color: #d8eaf7;
     --darker-color: #9DB2BF;
+    --hover-over-btn: #B8D4E3;
+    --chosen-tab-color: #84ddeb;
+    --hover-over-chosen: #69bfcc;/*#81A4CD;*/
 }
 
 html {
@@ -48,9 +51,22 @@ header {
         gap: 2.5rem;
 
         button {
+            flex: 0 1 250px;
             padding: 0.5rem 2.5rem;
             border-radius: 50px;
             background-color: var(--slightly-darker-color);
+        }
+
+        .currentTab {
+            background-color: var(--chosen-tab-color);
+        }
+
+        button:hover {
+            background-color: var(--hover-over-btn);
+        }
+
+        .currentTab:hover {
+            background-color: var(--hover-over-chosen);
         }
     }
 }
