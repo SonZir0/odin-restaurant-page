@@ -18,7 +18,8 @@
     --darker-color: #9DB2BF;
     --hover-over-btn: #B8D4E3;
     --chosen-tab-color: #84ddeb;
-    --hover-over-chosen: #69bfcc;/*#81A4CD;*/
+    --hover-over-chosen: #69bfcc;
+    /*#81A4CD;*/
 }
 
 html {
@@ -75,12 +76,17 @@ header {
     max-width: 1000px;
     flex: 1 1 1000px;
     align-self: center;
+
+    >div {
+        padding: 0px 8%;
+    }
 }
 
 /* header adjustment */
 @media (max-width: 600px) {
     header {
         padding: 0rem 0rem 0.25rem;
+
         nav {
             display: flex;
             flex-direction: column;
@@ -92,6 +98,35 @@ header {
                 padding: 0.25rem 0px;
                 min-width: 150px;
                 flex: 1;
+            }
+        }
+    }
+}
+
+/* Adjust Text */
+@media (max-width: 720px) {
+    #content {
+        h1 {
+            font-size: 3.5rem;
+        }
+
+        p {
+            font-size: 1.5rem;
+        }
+
+        @media (max-width: 565px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            p {
+                font-size: 1.35rem;
+            }
+
+            @media (max-width: 410px) {
+                h1 {
+                    font-size: 2rem;
+                }
             }
         }
     }
