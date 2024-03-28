@@ -1,0 +1,45 @@
+p {
+    margin: 0.75rem 0px;
+}
+
+.about {
+    .quoteSection {
+        padding: 1rem;
+        clip-path: xywh(0 10px 100% 90% round 0 50px);
+        background-color: rgb(238, 236, 236);
+
+        p:first-of-type {
+            font-weight: 300;
+            font-style: italic;
+        }
+
+        p+p {
+            font-weight: 500;
+            text-align: end;
+        }
+
+        @media (max-width: 360px) {
+            clip-path: xywh(0 10px 100% 93% round 0 50px);
+        }
+    }
+
+    .aboutSection {
+        p {
+            margin: 1.75rem 0px 0.75rem;
+            white-space: pre-line;
+        }
+
+        p:nth-child(even) {
+            margin-bottom: 3rem;
+        }
+
+        @media (max-width: 600px) {
+            p {
+                margin-top: 1.25rem;
+            }
+            p:nth-child(even) {
+                margin-bottom: 2.25rem;
+            }
+        }
+    }
+}
