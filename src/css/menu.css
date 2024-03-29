@@ -1,0 +1,84 @@
+.menuGrid {
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.recipeCard {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    gap: 1rem;
+
+    padding: 1rem;
+    border: 2px solid var(--darker-color);
+    border-radius: 16px;
+
+    img {
+        margin-right: 2rem;
+        width: 40%;
+        max-width: 500px;
+        border-radius: 16px;
+        aspect-ratio: 1/1;
+        float: left;
+    }
+
+
+}
+
+#content .menu {
+    h2 {
+        text-align: center;
+        font-size: 2.3rem;
+        margin: 0px;
+    }
+
+    p {
+        text-align: justify;
+        margin: 0px;
+    }
+
+    @media (max-width: 1200px) {
+        h2 {
+            font-size: 2rem;
+        }
+
+        p {
+            font-size: 1.75rem;
+        }
+    }
+
+    @media (max-width: 1000px) {
+        h2 {
+            font-size: 1.75rem;
+        }
+
+        p {
+            font-size: 1.5rem;
+        }
+    }
+
+    @media (max-width: 600px) {
+        h2 {
+            font-size: 1.35rem;
+        }
+
+        p {
+            font-size: 1.15rem;
+        }
+
+        img {
+            width: 100%;
+            float: none;
+            aspect-ratio: 2/1;
+            object-fit: cover;
+        }
+    }
+
+    @media (max-width: 400px) {
+        p {
+            font-size: 1rem;
+        }
+    }
+}

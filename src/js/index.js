@@ -2,12 +2,14 @@ import 'normalize.css';
 import './../css/style.css';
 import homeInit from './home.js';
 import aboutInit from './about.js';
+import menuInit from './menu.js';
 
 export default importAllImages;
 
 const contentDiv = document.querySelector('#content');
 const homeBtn = document.querySelector('.homeBtn');
 const aboutBtn = document.querySelector('.aboutBtn');
+const menuBtn = document.querySelector('.menuBtn');
 
 homeBtn.addEventListener('click', () => {
     if (homeBtn.classList[1] !== 'currentTab') {
@@ -24,6 +26,14 @@ aboutBtn.addEventListener('click', () => {
         clearContentDiv();
         toggleCurrentTab(aboutBtn);
         aboutInit(contentDiv);
+    }
+});
+
+menuBtn.addEventListener('click', () => {
+    if (menuBtn.classList[1] !== 'currentTab') {
+        clearContentDiv();
+        toggleCurrentTab(menuBtn);
+        menuInit(contentDiv);
     }
 });
 
