@@ -3,6 +3,8 @@ import './../css/style.css';
 import homeInit from './home.js';
 import aboutInit from './about.js';
 
+export default importAllImages;
+
 const contentDiv = document.querySelector('#content');
 const homeBtn = document.querySelector('.homeBtn');
 const aboutBtn = document.querySelector('.aboutBtn');
@@ -10,29 +12,36 @@ const aboutBtn = document.querySelector('.aboutBtn');
 homeBtn.addEventListener('click', () => {
     if (homeBtn.classList[1] !== 'currentTab') {
         clearContentDiv();
-        toggleChosenStyle(homeBtn);
+        toggleCurrentTab(homeBtn);
         homeInit(contentDiv);
     }
 });
-
 // dispatch event to display Home tab on page load
 homeBtn.dispatchEvent(new MouseEvent("click"));
 
 aboutBtn.addEventListener('click', () => {
     if (aboutBtn.classList[1] !== 'currentTab') {
         clearContentDiv();
-        toggleChosenStyle(aboutBtn);
+        toggleCurrentTab(aboutBtn);
         aboutInit(contentDiv);
     }
 });
 
-function toggleChosenStyle(targetBtn) {
+function toggleCurrentTab(targetBtn) {
     targetBtn.classList.toggle('currentTab');
-}
+};
 
 function clearContentDiv() {
     if (contentDiv.children.length) {
-        toggleChosenStyle(document.querySelector('.currentTab'));
+        toggleCurrentTab(document.querySelector('.currentTab'));
         contentDiv.removeChild(contentDiv.firstElementChild);
     }
 };
+
+function importAllImages(requireContext) {
+    let images = {};
+    requireContext.keys().map( (item, index) => {
+        images[item.replace('./', '')] = requireContext(item);
+    } );
+    return Object.values(images);
+}

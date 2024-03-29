@@ -1,22 +1,17 @@
 import './../css/home.css';
-import img1 from './../img/Nilagang.png'
-import img2 from './../img/MapoTofu.png'
-import img3 from './../img/PorkAsado.png'
-import img4 from './../img/TomatoSalad.png'
+import importImages from './index.js'
 
 export default createHomeDiv;
 
 function createImgNodes() {
     const images = [];
+    const imgSrcs = importImages(require.context('./../img', false, /\.(png|jpe?g|svg)$/));
+
     for (let i = 0; i < 4; i++) {
         images.push(new Image());
         images[i].classList.add(`img${i + 1}`);
+        images[i].src = imgSrcs[i];
     }
-    // this can be done dynamicly through requireContext.keys.map()
-    images[0].src = img1;
-    images[1].src = img2;
-    images[2].src = img3;
-    images[3].src = img4;
     return images;
 }
 
