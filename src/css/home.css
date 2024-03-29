@@ -1,5 +1,9 @@
 .home {
     text-align: center;
+    
+    p {
+        font-size: 1.8rem;
+    }
 }
 
 h1 {
@@ -8,10 +12,6 @@ h1 {
     font-weight: 400;
     text-transform: uppercase;
     white-space: pre-line;
-}
-
-p {
-    font-size: 1.8rem;
 }
 
 .images {

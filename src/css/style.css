@@ -19,7 +19,6 @@
     --hover-over-btn: #B8D4E3;
     --chosen-tab-color: #84ddeb;
     --hover-over-chosen: #69bfcc;
-    /*#81A4CD;*/
 }
 
 html {
@@ -79,8 +78,8 @@ header {
 }
 
 #content {
-    max-width: 1000px;
-    flex: 1 1 1000px;
+    max-width: 1200px;
+    flex: 1 1 1200px;
     align-self: center;
 
     >div {
