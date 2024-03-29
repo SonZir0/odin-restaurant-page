@@ -62,12 +62,18 @@ header {
             background-color: var(--chosen-tab-color);
         }
 
-        button:hover {
+        button:hover,
+        button:focus-visible {
             background-color: var(--hover-over-btn);
         }
 
-        .currentTab:hover {
+        .currentTab:hover,
+        .currentTab:focus-visible {
             background-color: var(--hover-over-chosen);
+        }
+
+        button:focus-visible {
+            outline: 2px solid dimgray;
         }
     }
 }
